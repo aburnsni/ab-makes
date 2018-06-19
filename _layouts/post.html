@@ -20,6 +20,20 @@ layout: main
         <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       {{content | markdownify}}
+      <ul class="resources">
+        {% if page.github %}
+          <li>
+          <i class="fa fa-github" aria-hidden="true"></i>&nbsp;
+          <a href="https://github.com/{{ page.github }}" title="Github Repository" rel="nofollow" target="_blank">Github Repository</a>
+          </li>
+        {% endif %}
+        {% if page.downloads %}
+        <li>
+          <i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;
+        </li>
+        {% endif %}
+      </ul>
+      
       <div class="page-footer">
         <div class="page-share">
           <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
