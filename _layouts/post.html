@@ -30,6 +30,7 @@ layout: main
         {% if page.downloads %}
         <li>
           <i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;
+          <a href={{ "/assets/files/" | prepend: site.baseurl | append : page.downloads }}>{{ page.downloads }}</a>
         </li>
         {% endif %}
       </ul>
