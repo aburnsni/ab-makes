@@ -6,6 +6,7 @@ img:
 tags: midi arduino
 github: aburnsni/programmable_midi_switch_box
 downloads:
+hidden: false
 ---
 The Tipenny Guitar was one of my first arduino MIDI controllers.
 Built around an Arduino Uno and an Adafruit touch shield.
