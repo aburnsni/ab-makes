@@ -18,7 +18,7 @@ social-linkedin:
 social-email: aburnsni@gmail.com
 
 # Disqus
-discus-identifier: ab-designs # add your discus identifier
+discus-identifier: ab-creates # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
@@ -32,6 +32,8 @@ plugins:
 
 paginate: 8
 paginate_path: "/page/:num"
+
+highlighter: pygments
 
 sass:
     sass_dir: assets/css/scss/
