@@ -2,7 +2,7 @@
 layout: post
 title:  "Powerpoint Controller"
 date:   2000-01-11 12:00:00 +0100
-img: 
+img: powerpoint_controller.jpg
 tags: arduino powerpoint switch
 github: aburnsni/powerpoint_controller
 downloads:
