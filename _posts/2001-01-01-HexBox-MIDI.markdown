@@ -8,4 +8,4 @@ github: aburnsni/honeycomb_midi
 downloads:
 hidden: false
 ---
-# HexBox MIDI
+The Hexbox MIDI is another capacitive touch MIDI controller.  It works in a similar method to the [Tippenny Guitar]({% post_url 2018-06-17-tippenny-guitar %})

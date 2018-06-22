@@ -8,7 +8,7 @@ github: aburnsni/tippenny_guitar
 downloads: penny_guitar_box.zip
 hidden: false
 ---
-The **[Tippenny][tippenny] Guitar** was one of my first arduino MIDI controllers.
+The **Tippenny<sup id="a1">[1](#f1)</sup> Guitar** was one of my first arduino MIDI controllers.
 
 # Hardware
 
@@ -46,6 +46,8 @@ int CHORD_D[] = {0, 0, NOTE_D3, NOTE_A3, NOTE_D4, NOTE_FS4};
 {% endhighlight %}
 
 The "0"s in the chords allow for unused strings in the guitar chords.
+
+<b id="f1">1</b> [http://www.dsl.ac.uk/entry/snd/tippenny][tippenny] [↩](#a1)
 
 [tippenny]: http://www.dsl.ac.uk/entry/snd/tippenny
 [arduino uno]: https://store.arduino.cc/arduino-uno-rev3
