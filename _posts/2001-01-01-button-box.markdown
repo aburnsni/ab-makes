@@ -10,4 +10,4 @@ hidden: false
 ---
 # Capacitive touch Button Box
 
-Using Adafruit MP£121 touch panel.
+Using Adafruit MPR121 touch panel.
