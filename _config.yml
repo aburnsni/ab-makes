@@ -21,7 +21,7 @@ social-email: aburnsni@gmail.com
 discus-identifier: ab-makes # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-121802454-1
 
 # Build Settings
 markdown: kramdown
