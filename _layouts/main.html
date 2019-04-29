@@ -12,15 +12,17 @@ layout: default
       <p>{{site.about-author}}</p>
     </div>
   </header> <!-- End Header -->
-  <h1>Tas</h1>
+  <h1>Tags</h1>
+  <ul>
     {% assign tags = site.tags | sort %}
     {% for tag in tags %}
-    <span class="site-tag page-tag">
-        <a href="/tags/{{ tag | first | slugify }}/">
+    <li class="site-tag">
+        <a href="/tags/#{{ tag | first | slugify }}/">
                 #{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
         </a>
-    </span>
+      </li>
     {% endfor %}
+  </ul>
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
