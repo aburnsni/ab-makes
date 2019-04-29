@@ -11,20 +11,21 @@ layout: default
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
     </div>
+    <div class = "tags">
+      <h1>Tags</h1>
+      <ul>
+        {% assign tags = site.tags | sort %}
+        {% for tag in tags %}
+        <li class="site-tag">
+            <a href="/tags/#{{ tag | first | slugify }}/">
+                    #{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </header> <!-- End Header -->
-  <div>
-    <h1>Tags</h1>
-    <ul>
-      {% assign tags = site.tags | sort %}
-      {% for tag in tags %}
-      <li class="site-tag">
-          <a href="/tags/#{{ tag | first | slugify }}/">
-                  #{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
