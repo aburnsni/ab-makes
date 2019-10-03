@@ -35,7 +35,7 @@ The case was laser cut from 3mm MDF.  The main box template was designed at Make
 Chords are played with a 5ms delay between each note to give a more natural guitar effect.
 
 MIDI notes and chords are defined as follows:
-{% highlight arduino %}
+{% highlight cpp %}
 #define NOTE_C3 4
 #define NOTE_CS3 49
 #define NOTE_Db3 49

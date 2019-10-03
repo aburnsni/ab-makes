@@ -14,7 +14,7 @@ A simple powerpoint controller using 2 switch inputs to an Arduino Pro Micro.  T
 
 Often used with foot switches while playing bass guitar.
 
-{% highlight arduino %}
+{% highlight cpp %}
 #include <Keyboard.h>
 const int buttonPinL = 7;
 const int buttonPinR = 6;
