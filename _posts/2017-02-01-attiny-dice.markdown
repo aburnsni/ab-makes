@@ -2,7 +2,7 @@
 layout: post
 title:  "ATTiny85 Dice"
 date:   2017-02-01 12:00:00 +0100
-img: 
+img: arduino.jpg
 tags: arduino attiny
 github: aburnsni/arduino_dice
 downloads:

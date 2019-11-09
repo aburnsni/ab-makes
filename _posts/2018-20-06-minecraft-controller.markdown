@@ -2,7 +2,7 @@
 layout: post
 title:  "Minecraft Contoller"
 date:   2018-06-21 12:00:00 +0100
-img: 
+img: arduino.jpg
 tags: arduino keyboard art
 github: aburnsni/touch_micecraft_keyboard
 downloads:

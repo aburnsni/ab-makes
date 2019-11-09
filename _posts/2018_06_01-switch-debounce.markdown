@@ -2,7 +2,7 @@
 layout: post
 title:  "Switch Debouncer"
 date:   2000-01-11 12:00:00 +0100
-img: 
+img: arduino.jpg
 tags: arduino midi
 github: aburnsni/sfx_switch_debounce
 downloads:
