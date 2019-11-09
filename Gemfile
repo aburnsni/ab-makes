@@ -1,10 +1,11 @@
 source "https://rubygems.org"
 
+gem "jekyll", github: "jekyll/jekyll"
+
 group :jekyll_plugins do
-  gem "jekyll-sitemap"
+  gem "jekyll-sitemap", github: "jekyll/jekyll-sitemap"
   gem "jekyll-paginate"
-  gem "jemoji"
-  gem "pygments.rb"
+  gem "jemoji", github: "jekyll/jemoji"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

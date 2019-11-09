@@ -1,0 +1,21 @@
+/* Tagcloud styling */
+.sidebar {
+  .tags {
+    h1 {
+      margin: 0 0;
+      font-size: 1.5em;
+    }
+
+    ul {
+      padding-inline-start: 0px;
+      margin-block-start: 0px;
+
+      li {
+        font-size: 0.8em;
+        a {
+            margin: 3px 8px;
+        }
+      }
+    }
+  }
+}
