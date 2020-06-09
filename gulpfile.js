@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var imageResize = require('gulp-image-resize');
+var del = require('del');
 var prefix = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
@@ -21,7 +23,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 });
 
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['sass', 'img', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'img', 'del', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -43,6 +45,38 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('assets/css'));
 });
 
+//  Resize images
+gulp.task('resize', function () {
+    return gulp.src('assets/img/originals/*.*')
+        // Save original
+        .pipe(gulp.dest('assets/img/originals/done'))
+        .pipe(imageResize({
+            width: 1280,
+            imageMagick: true
+        }))
+        .pipe(cache(imagemin({
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		})))
+        .pipe(gulp.dest('assets/img/large'))
+        .pipe(imageResize({
+            width: 500,
+            imageMagick: true
+        }))
+        .pipe(cache(imagemin({
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		})))
+        .pipe(gulp.dest('assets/img/thumbs'));
+});
+gulp.task('del', ['resize'], function () {
+    return del(['assets/img/originals/*.*']);
+});
+
 // Compression images
 gulp.task('img', function() {
 	return gulp.src('assets/img/**/*')
@@ -60,7 +94,8 @@ gulp.task('img', function() {
 gulp.task('watch', function () {
     gulp.watch('assets/css/scss/**/*.scss', ['sass']);
     gulp.watch('assets/js/**/*.js', ['jekyll-rebuild']);
-    gulp.watch('assets/img/**/*', ['img']);
+    gulp.watch('assets/img/*', ['img']);
+    gulp.watch('assets/img/originals/*', ['del'])
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_pages/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
