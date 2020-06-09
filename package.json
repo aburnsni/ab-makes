@@ -1,11 +1,21 @@
 {
-  "name": "Jekyll-Gulp-Sass-Autoprefixer-Imagemin-BrowserSync",
+  "name": "ab-makes",
   "version": "1.0.0",
-  "description": "A starter project for Jekyll",
+  "description": "ab-makes.uk website",
   "main": "index.js",
-  "repository": "https://github.com/artemsheludko/Jekyll-Gulp-Sass-Autoprefixer-Imagemin-BrowserSync",
-  "author": "Artem Sheludko",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aburnsni/ab-makes.git"
+  },
+  "author": "Andrew Burns",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aburnsni/ab-makes/issues"
+  },
+  "homepage": "https://github.com/aburnsni/ab-makes#readme",
   "dependencies": {
     "browser-sync": "^2.18.13",
     "child_process": "^1.0.2",
